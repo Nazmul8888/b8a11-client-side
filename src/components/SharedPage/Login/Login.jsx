@@ -1,13 +1,39 @@
-
+import { useContext } from 'react';
+import { BsGoogle  } from 'react-icons/bs';
+import { AuthContext } from '../../../Routes/Provider/AuthProvider';
+import { Link } from "react-router-dom";
 
 const Login = () => {
-    const handelLogin = e=>{
+
+    const {signIn,signWithGoogle} = useContext(AuthContext);
+
+
+    const handelLogin = e => {
         e.preventDefault()
         const email = e.target.email.value;
         const password = e.target.password.value;
         const photo = e.target.photo.value;
 
-        console.log(email,password,photo)
+        console.log(email, password, photo)
+        signIn(email, password)
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+    const handelGoogleSignIn = () => {
+        signWithGoogle()
+            .then(result => {
+                console.log(result.user)
+            })
+
+            .catch(error => {
+                console.log(error)
+            })
+
+
     }
     return (
         <div>
@@ -38,7 +64,7 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Photo URL</span>
                                 </label>
-                                <input type="password" name="photo" placeholder="password" className="input input-bordered" required />
+                                <input type="photo" name="photo" placeholder="Photo URL" className="input input-bordered" required />
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
@@ -47,11 +73,23 @@ const Login = () => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
                         </form>
+
+                        <div className=" flex justify-center space-x-4 items-center py-5 ">
+                            <p className=" text-center">Dont have an Account? please<Link className="text-blue-600" to='/register'> Register
+                            </Link>
+
+                            </p>
+                            <div onClick={handelGoogleSignIn} role="button" className="flex justify-center text-green-500">
+                                < BsGoogle size={30}></BsGoogle>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    );
+         </div>
+      );
+          
 };
 
-export default Login;
+            export default Login;
