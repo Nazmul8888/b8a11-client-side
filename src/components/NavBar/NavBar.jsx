@@ -1,7 +1,23 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Routes/Provider/AuthProvider";
+import userPicture from '../../assets/Ellipse 1 (2).png'
+
 
 
 const NavBar = () => {
+    const {user,logOut} = useContext(AuthContext)
+
+  const handelSignOut = ()=>{
+   logOut()
+   .then(result=>{
+    console.log(result.user)
+   })
+   .catch(error=>{
+    console.log(error)
+   })
+
+  }
     const navLinks = <>
     
     <li><NavLink to='/'>Home</NavLink></li>
@@ -11,7 +27,7 @@ const NavBar = () => {
     </>
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-green-100">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -53,9 +69,47 @@ const NavBar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <a className="btn">Button</a>
+                <div className="navbar-center hidden lg:flex">
+                    <ul className="menu menu-horizontal px-1">
+                        {/* <li><a>Home</a></li> */}
+                        <li tabIndex={0}>
+                            <details>
+                                <summary>Assignment</summary>
+                                <ul className="p-2">
+                                    <li><a>Profile</a></li>
+                                    <li><a>My Assignment</a></li>
+                                    <li><a>Create Assignment</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        {/* <li><a>Login</a></li>
+                        <li><a>Register</a></li> */}
+                        {/* {navLinks} */}
+                    </ul>
                 </div>
+                <div className="navbar-end">
+        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+        <div className="w-10 rounded-full">
+          <img src={userPicture} />
+        </div>
+      </label>
+
+
+      {
+        user ?
+        <button onClick={handelSignOut} className="btn">Sign Out</button>
+        :
+        <Link to='/login'>
+           <button className="btn">Login</button>
+        
+        </Link>
+
+      }
+
+
+
+        
+        </div>
             </div>
         </div>
     );

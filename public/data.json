@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "courseName": "Physics",
+      "image": "https://i.ibb.co/z7d3pV8/team-meeting-startups.jpg",
+      "Details": "The place is close to Barceloneta Beach and bus ",
+      "price": "2000"
+    },
+    {
+      "id": 2,
+      "courseName": "Biology",
+      "image": "https://i.ibb.co/zR6zNvY/college-mates-studying-together.jpg",
+      "Details": " The place is close to Barceloneta Beach and bus",
+      "price": "6000"
+    },
+    {
+      "id": 3,
+      "courseName": "Math",
+      "image":"https://i.ibb.co/mGSt64P/students-working-library.jpg",
+      "Details":"The place is close to Barceloneta Beach and bus",
+      "price": "4000"
+    },
+    {
+      "id": 4,
+      "courseName": "Chemistry",
+      "image": "https://i.ibb.co/hctkY09/tired-students-class.jpg",
+      "Details": "The place is close to Barceloneta Beach and bus ",
+      "price": "8000"
+    },
+    {
+      "id": 5,
+      "courseName": "Computer Science",
+      "image": "https://i.ibb.co/0VYbB7g/students-discussing-study-object.jpg",
+      "Details": "The place is close to Barceloneta Beach and bus ",
+      "price": "7000"
+    },
+    {
+      "id": 6,
+      "courseName": "Psychology",
+      "image": "https://i.ibb.co/NLXz7jX/young-people-preparing-assignment.jpg",
+      "Details": "The place is close to Barceloneta Beach and bus ",
+      "price": "3000"
+    }
+  ]

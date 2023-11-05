@@ -10,6 +10,7 @@ import Home from './components/Home/Home';
 import Register from './components/SharedPage/Register/Register';
 import Login from './components/SharedPage/Login/Login';
 import AuthProvider from './Routes/Provider/AuthProvider';
+import CreateAssignment from './components/CourseCreation/CreateAssignment';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: ()=> fetch('http://localhost:5000/course')
       },
       {
         path: '/register',
@@ -26,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login></Login>
+      },
+      {
+        path: '/createAssignment',
+        element:<CreateAssignment></CreateAssignment>
       }
     ]
   },

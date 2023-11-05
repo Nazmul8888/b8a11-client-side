@@ -12,9 +12,8 @@ const Login = () => {
         e.preventDefault()
         const email = e.target.email.value;
         const password = e.target.password.value;
-        const photo = e.target.photo.value;
 
-        console.log(email, password, photo)
+        console.log(email, password)
         signIn(email, password)
             .then(result => {
                 console.log(result.user)
@@ -60,15 +59,7 @@ const Login = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Photo URL</span>
-                                </label>
-                                <input type="photo" name="photo" placeholder="Photo URL" className="input input-bordered" required />
-                                <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
-                            </div>
+                            
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
                             </div>
