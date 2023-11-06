@@ -23,6 +23,8 @@ const NavBar = () => {
     <li><NavLink to='/'>Home</NavLink></li>
     <li><NavLink to='/register'>Register</NavLink></li>
     <li><NavLink to='/login'>Login</NavLink></li>
+    <li><NavLink to='/My Assignment'>My Assignment</NavLink></li>
+    <li><NavLink to='/Create Assignment'>Create Assignment</NavLink></li>
 
     </>
     return (
@@ -34,15 +36,6 @@ const NavBar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            {/* <li><a>Nazmul</a></li>
-                            <li>
-                                <a>Parent</a>
-                                <ul className="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a>Nazmul</a></li> */}
                         {navLinks}
                         </ul>
                     </div>
@@ -66,7 +59,7 @@ const NavBar = () => {
                         </li>
                         {/* <li><a>Login</a></li>
                         <li><a>Register</a></li> */}
-                        {navLinks}
+                        {/* {navLinks} */}
                     </ul>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -74,11 +67,12 @@ const NavBar = () => {
                         {/* <li><a>Home</a></li> */}
                         <li tabIndex={0}>
                             <details>
-                                <summary>Assignment</summary>
+                                <summary>Profile</summary>
                                 <ul className="p-2">
-                                    <li><a>Profile</a></li>
+                                    {/* <li><a>Profile</a></li>
                                     <li><a>My Assignment</a></li>
-                                    <li><a>Create Assignment</a></li>
+                                    <li><a>Create Assignment</a></li> */}
+                                    {navLinks}
                                 </ul>
                             </details>
                         </li>
