@@ -11,6 +11,8 @@ import Register from './components/SharedPage/Register/Register';
 import Login from './components/SharedPage/Login/Login';
 import AuthProvider from './Routes/Provider/AuthProvider';
 import CreateAssignment from './components/CourseCreation/CreateAssignment';
+import MyAssignment from './components/SharedPage/MyAssignment';
+import PrivateRoutes from './Routes/PrivateRoutes';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +35,10 @@ const router = createBrowserRouter([
         path: 'createAssignment/:id',
         element:<CreateAssignment></CreateAssignment>,
         loader: ({params})=> fetch(`http://localhost:5000/course/${params.id}`)
+      },
+      {
+        path:'myAssignment',
+        element: <PrivateRoutes><MyAssignment></MyAssignment></PrivateRoutes>
       }
     ]
   },
