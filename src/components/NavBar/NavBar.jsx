@@ -21,10 +21,12 @@ const NavBar = () => {
     const navLinks = <>
     
     <li><NavLink to='/'>Home</NavLink></li>
-    <li><NavLink to='/register'>Register</NavLink></li>
-    <li><NavLink to='/login'>Login</NavLink></li>
     <li><NavLink to='/My Assignment'>My Assignment</NavLink></li>
     <li><NavLink to='/Create Assignment'>Create Assignment</NavLink></li>
+    <li><NavLink to='/login'>Login</NavLink></li>
+    <li><NavLink to='/register'>Register</NavLink></li>
+   
+   
 
     </>
     return (
@@ -46,39 +48,14 @@ const NavBar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        {/* <li><a>Home</a></li> */}
-                        <li tabIndex={0}>
-                            <details>
-                                <summary>Course</summary>
-                                <ul className="p-2">
-                                    <li><a>EASY</a></li>
-                                    <li><a>MEDIUM</a></li>
-                                    <li><a>HARD</a></li>
-                                </ul>
-                            </details>
-                        </li>
-                        {/* <li><a>Login</a></li>
-                        <li><a>Register</a></li> */}
-                        {/* {navLinks} */}
+                        {navLinks}
                     </ul>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        {/* <li><a>Home</a></li> */}
-                        <li tabIndex={0}>
-                            <details>
-                                <summary>Profile</summary>
-                                <ul className="p-2">
-                                    {/* <li><a>Profile</a></li>
-                                    <li><a>My Assignment</a></li>
-                                    <li><a>Create Assignment</a></li> */}
-                                    {navLinks}
-                                </ul>
-                            </details>
-                        </li>
-                        {/* <li><a>Login</a></li>
-                        <li><a>Register</a></li> */}
-                        {/* {navLinks} */}
+                       
+                    {/* {navLinks} */}
+                              
                     </ul>
                 </div>
                 <div className="navbar-end">

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const CourseServices = ({course}) => {
-    const {_id,image,courseName,Details,price}= course;
+    const {_id,image,title,description,price}= course;
     return (
         <div>
      <div className="card w-96 bg-base-100 shadow-xl">
@@ -10,8 +10,8 @@ const CourseServices = ({course}) => {
     <img src={image} alt="Shoes" className="rounded-xl" />
   </figure>
   <div className="card-body items-center text-center">
-    <h2 className="card-title">{courseName}!</h2>
-    <p>{Details}</p>
+    <h2 className="card-title">{title}!</h2>
+    <p>{description}</p>
     <p>Price-$ {price}</p>
     <div className="card-actions">
       <Link to={`/createAssignment/${_id}`}>
