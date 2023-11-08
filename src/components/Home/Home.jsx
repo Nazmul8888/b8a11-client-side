@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner/Banner";
 import CourseServices from "./CourseServices";
+import GlobalSection from "../SharedPage/Golobal/GlobalSection";
 
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
     return (
         <div>
         <Banner></Banner>
+        
 
 
         <div className="grid grid-cols-3 md:grid-cols-3 gap-6 py-10">
@@ -18,6 +20,7 @@ const Home = () => {
          }
 
         </div>
+        <GlobalSection></GlobalSection>
 
 
 

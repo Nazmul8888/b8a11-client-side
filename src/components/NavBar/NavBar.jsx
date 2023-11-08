@@ -21,10 +21,10 @@ const NavBar = () => {
     const navLinks = <>
 
         <li><Link to='/'>Home</Link></li>
-
-        <li><Link to='/Create Assignment'>Create Assignment</Link></li>
+        <li><Link to='/MyAssignment'>My Assignment</Link></li>
+        
         {user?.email ? <>
-            <li><Link to='/MyAssignment'>My Assignment</Link></li>
+            <li><Link to='/Create Assignment'>Create Assignment</Link></li>
             <li><button onClick={handelLogOut}>logout</button></li>
         </>
             :

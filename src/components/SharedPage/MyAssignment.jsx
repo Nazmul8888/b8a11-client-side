@@ -10,7 +10,7 @@ const MyAssignment = () => {
 
 
 
-    const url = `http://localhost:5000/creation?email=${user?.email}`;
+    const url = `https://b8a11-server-side-nazmul8888.vercel.app/creation?email=${user?.email}`;
 
     useEffect(() => {
         fetch(url)
@@ -21,7 +21,7 @@ const MyAssignment = () => {
     const handelDelate = id=>{
         const proceed = confirm('Are you want to delate ')
         if(proceed){
-            fetch(`http://localhost:5000/creation/${id}`,{
+            fetch(`https://b8a11-server-side-nazmul8888.vercel.app/creation/${id}`,{
                 method:"DELETE"
             })
             .then(res=>res.json())
@@ -38,7 +38,7 @@ const MyAssignment = () => {
     }
     
     const handelAssignmentUpdate = id=>{
-        fetch(`http://localhost:5000/creation/${id}`,{
+        fetch(`https://b8a11-server-side-nazmul8888.vercel.app/creation/${id}`,{
             method: 'PATCH',
             headers:{
                 'content-type': 'application/json'

@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: ()=> fetch('http://localhost:5000/course')
+        loader: ()=> fetch('https://b8a11-server-side-nazmul8888.vercel.app/course')
       },
       {
         path: 'register',
@@ -32,14 +32,15 @@ const router = createBrowserRouter([
         element: <Login></Login>
       },
       {
-        path: 'createAssignment/:id',
-        element:<CreateAssignment></CreateAssignment>,
-        loader: ({params})=> fetch(`http://localhost:5000/course/${params.id}`)
+       path: 'createAssignment/:id',
+        element:<PrivateRoutes><CreateAssignment></CreateAssignment>,</PrivateRoutes>,
+        loader: ({params})=> fetch(`https://b8a11-server-side-nazmul8888.vercel.app/course/${params.id}`)
       },
       {
         path:'myAssignment',
-        element: <PrivateRoutes><MyAssignment></MyAssignment></PrivateRoutes>
-      }
+        element: <MyAssignment></MyAssignment>
+      },
+     
     ]
   },
 ]);

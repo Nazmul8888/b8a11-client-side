@@ -32,7 +32,7 @@ const CreateAssignment = () => {
 
     console.log(submit);
 
-    fetch('http://localhost:5000/creation', {
+    fetch('https://b8a11-server-side-nazmul8888.vercel.app/creation', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -54,10 +54,10 @@ const CreateAssignment = () => {
 
   return (
     <div>
-      <h2>Assignment Booking:{title}</h2>
+      <h2 className="text-3xl font-semibold text-pink-700 text-center">Assignment : {title}</h2>
 
 
-      <form onSubmit={handelBooking} >
+      <form onSubmit={handelBooking} className="bg-pink-700  font-semibold" >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="form-control">
             <label className="label">
@@ -95,16 +95,23 @@ const CreateAssignment = () => {
             </label>
             <input type="text" name="image" placeholder="photo URL" className="input input-bordered" required />
           </div>
+         
           <div>
+          <div className="form-control">
+          <label className="label">
+              <span className="label-text">Difficulty Category</span>
+            </label>
             <select value={selectedValue} onChange={handleChange}>
-              <option value="option1">HARD</option>
-              <option value="option2">MEDIUM</option>
-              <option value="option3">EASY </option>
+              <option value="hard">HARD</option>
+              <option value="medium">MEDIUM</option>
+              <option value="easy">EASY </option>
             </select>
             <p>Selected value: {selectedValue}</p>
+          
+          </div>
           </div>
         </div>
-        <div className="form-control mt-6">
+        <div className="form-control mt-6 py-10">
 
           <input className="btn btn-primary  btn-block" type="submit" value="Submit" />
         </div>
