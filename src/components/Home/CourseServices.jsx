@@ -15,7 +15,7 @@ const CourseServices = ({course}) => {
     <p>Price-$ {price}</p>
     <div className="card-actions">
       <Link to={`/createAssignment/${_id}`}>
-      <button className="btn btn-primary">CREATE</button>
+      <button className="btn btn-primary">Assignment</button>
       </Link>
     </div>
   </div>

@@ -3,42 +3,43 @@
       "id": 1,
       "title": "Physics",
       "image": "https://i.ibb.co/z7d3pV8/team-meeting-startups.jpg",
-      "description": "The place is close to Barceloneta Beach and bus ",
+      "description": "Physics is the branch of science that deals with the structure of matt…",
       "price": "2000"
     },
     {
       "id": 2,
       "title": "Biology",
       "image": "https://i.ibb.co/zR6zNvY/college-mates-studying-together.jpg",
-      "description": " The place is close to Barceloneta Beach and bus",
+      "description": "Biology is a natural science discipline that studies living things."
+      ,
       "price": "6000"
     },
     {
       "id": 3,
       "title": "Math",
       "image":"https://i.ibb.co/mGSt64P/students-working-library.jpg",
-      "description":"The place is close to Barceloneta Beach and bus",
+      "description":"Mathematics is the science and study of quality, structure, space, and…",
       "price": "4000"
     },
     {
       "id": 4,
       "title": "Chemistry",
       "image": "https://i.ibb.co/hctkY09/tired-students-class.jpg",
-      "description": "The place is close to Barceloneta Beach and bus ",
+      "description": "Chemistry is a branch of natural science that deals principally with t…",
       "price": "8000"
     },
     {
       "id": 5,
       "title": "Computer Science",
       "image": "https://i.ibb.co/0VYbB7g/students-discussing-study-object.jpg",
-      "description": "The place is close to Barceloneta Beach and bus ",
+      "description": "Computer science focuses on the development and testing of software an…",
       "price": "7000"
     },
     {
       "id": 6,
       "title": "Psychology",
       "image": "https://i.ibb.co/NLXz7jX/young-people-preparing-assignment.jpg",
-      "description": "The place is close to Barceloneta Beach and bus ",
+      "description": "Psychologists typically do the following: Conduct scientific studies o…",
       "price": "3000"
     }
   ]

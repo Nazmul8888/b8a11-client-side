@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../Routes/Provider/AuthProvider";
 import userPicture from '../../assets/Ellipse 1 (2).png'
 
@@ -21,14 +21,14 @@ const NavBar = () => {
     const navLinks = <>
 
         <li><Link to='/'>Home</Link></li>
-        
+
         <li><Link to='/Create Assignment'>Create Assignment</Link></li>
         {user?.email ? <>
             <li><Link to='/MyAssignment'>My Assignment</Link></li>
             <li><button onClick={handelLogOut}>logout</button></li>
-        </> 
-        :
-        <li><Link to='/login'>Login</Link></li>
+        </>
+            :
+            <li><Link to='/login'>Login</Link></li>
 
         }
         <li><Link to='/register'>Register</Link></li>
@@ -51,7 +51,7 @@ const NavBar = () => {
                     <div className="w-10">
                         <img src="https://i.ibb.co/2gbgYpy/success-coach-logo-elegant-concept-of-success-marketing-logo-png-268618.jpg" alt="" />
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <a className="btn btn-ghost normal-case text-xl">Mentors</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -71,18 +71,6 @@ const NavBar = () => {
                             <img src={userPicture} />
                         </div>
                     </label>
-
-{/* 
-                    {
-                        user ?
-                            <button onClick={handelSignOut} className="btn">Sign Out</button>
-                            :
-                            <Link to='/login'>
-                                <button className="btn">Login</button>
-
-                            </Link>
-
-                    } */}
 
 
 
